@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test CI/CD Application</title>
+    <!-- jQuery CDN 추가 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <h1>Welcome to Spring Boot!</h1>
+<input type="text" id="inputAlert">
+<button onclick="inputAlert()">확인</button>
 <p>This is the homepage of your Spring Boot application.</p>
+
+<script>
+    function inputAlert() {
+        let inputTxt = $('#inputAlert').val(); // jQuery 사용
+        if (inputTxt != null && inputTxt.trim() !== '') {
+            alert(inputTxt);
+        } else {
+            alert('뭐라도 입력해야지');
+        }
+    }
+</script>
+
 </body>
 </html>
